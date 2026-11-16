@@ -5,11 +5,11 @@
 using namespace std;
 
 int main() {
-    // Yahan humne points pehle se hi fix (hardcode) kar diye hain, taaki cin ki zaroorat hi na pade!
+    
     float x1 = 100, y1 = 100;
     float x2 = 400, y2 = 300;
 
-    // Graphics mode initialize karna
+    // Graphics mode initialize 
     int gd = DETECT, gm;
     initgraph(&gd, &gm, (char*)"");
 
@@ -25,17 +25,17 @@ int main() {
     float x = x1;
     float y = y1;
 
-    // Pixel-by-pixel line plot karna
+    // Pixel-by-pixel line plot 
     for (int i = 0; i <= steps; i++) {
         putpixel(round(x), round(y), WHITE);
         x += x_inc;
         y += y_inc;
     }
 
-    // Output screen ko roke rakhne ke liye
+    
     getch();
     
-    // Graphics mode close karna
+    // close Graphics mode 
     closegraph();
     
     return 0;
